@@ -5,11 +5,11 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 5;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", " fontawesome:size=10" }; /* for T500 use size ten  */
+static const char *fonts[]          = {" monospace:size=10", " fontawesome:size=10" }; /* for T500 use size ten  */
 static const char dmenufont[]       = "monospace:size=10"; /* size eleven  for higher resolution desktops */
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray3[]       = "#f8f8f8"; /* White = #f8f8f8 */
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#18b53a"; /* Green = #18b53a  */
 static const char col_pink[]        = "#3D92E0"; /* Blue = #3d92e0 */
