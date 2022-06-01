@@ -12,17 +12,15 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#f8f8f8"; /* White = #f8f8f8 */
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#18b53a"; /* Green = #18b53a  */
-static const char col_pink[]        = "#3D92E0"; /* Blue = #3d92e0 */
-static const char col_blue[]	    = "#0f191f"; /* Scrapped Colour */
-static const char col_black[]       = "#111111"; /* selected items */
-static const char *colors[]      = {
+static const char col_pink[]        = "#375BD5"; /* Blue = #3d92e0 */
+static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_pink  },
 	[SchemeSel]  = { col_gray1, col_cyan,  col_cyan  },
 };
 
 /* tagging */
-static const char *tags[] = { "","","", "", "", "" }; /* half of these tabs do nothing */
+static const char *tags[] = { "", "", "", "", "", "" }; /* half of these tabs do nothing */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -32,9 +30,9 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,      "Firefox",       1 << 5,       0,           -1 },
-	{ "xfce4-terminal", NULL, NULL,       0,       0,           -1 },
+	{ "xfce4-terminal", NULL, NULL,       1<<1,       0,           -1 },
 	{ "xfce4-settings-manager", NULL, NULL, 0, 1, -1 },
-	{ "Thunar",   NULL,       "Thunar",       1 << 1,       0,           -1 },
+	{ "pcmanfm",   NULL,       "pcmanfm",       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
@@ -44,8 +42,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "=",      tile },    /* first entry is default */
-	{ "<",      NULL },    /* no layout function means floating behavior */
+	{ "[]=",      tile },    /* first entry is default */
+	{ "<><",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
 
